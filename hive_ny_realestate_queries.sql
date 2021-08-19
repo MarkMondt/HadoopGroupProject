@@ -26,7 +26,8 @@ CREATE TABLE realestate_data (
     sale_date TIMESTAMP
 )
 ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ',';
+FIELDS TERMINATED BY ','
+tblproperties("skip.header.line.count"="1");
 
 LOAD DATA LOCAL INPATH 'nyc-rolling-sales.csv' OVERWRITE INTO TABLE realestate_data;
 
