@@ -24,7 +24,7 @@ CREATE TABLE realestate_data (
     tax_class_at_time_of_sale INT,
     building_class_at_time_of_sale STRING,
     sale_price INT,
-    sale_date TIMESTAMP
+    sale_date DATE
 )
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
