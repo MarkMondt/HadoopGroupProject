@@ -6,10 +6,7 @@ typeAverages = ORDER typeAveragesUnordered by avg_sale DESC;
 
 STORE typeAverages INTO 'realestate/results/avg_sale_by_buildingtype' using PigStorage (',');
 
-realestateAveragePPF = FOREACH realestate {
-						burough = realestate.burough;
-						pricePerFoot = (float)realestate.sale_price/realestate.gross_square_feet;
-					}
+realestateAveragePPF = FOREACH realestate GENERATE realestate.burough as burough, (float)realestate.sale_price/realestate.gross_square_feet as pricePerFoot;
 
 realestateByBorough = GROUP realestateAveragePPF by borough;
 
