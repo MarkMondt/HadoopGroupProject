@@ -1,5 +1,10 @@
-mv nyc-rolling-sales.csv nyc_edited.csv
-sed 's/,[ -]*,/,,/g' nyc_edited.csv > nyc-rolling-sales.csv
+mv nyc-rolling-sales.csv nyc_edit.csv
+rm nyc-rolling-sales.csv
+sed 's/,[ -],/,,/g' nyc_edit.csv > nyc-rolling-sales.csv
+rm nyc_edited.csv
+
+
+rm nyc_edited.csv
 
 sudo hive -f hive_ny_realestate_queries.sql
 
