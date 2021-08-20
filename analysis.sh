@@ -1,7 +1,7 @@
 mv nyc-rolling-sales.csv nyc_edit.csv
 rm nyc-rolling-sales.csv
-sed 's/,[ -],/,,/g' nyc_edit.csv > nyc-rolling-sales.csv
-rm nyc_edited.csv
+sed 's/,[[:blank:]]*-[[:blank:]]*,/,,/g' nyc_edit.csv > nyc-rolling-sales.csv
+rm nyc_edit.csv
 
 
 rm nyc_edited.csv
