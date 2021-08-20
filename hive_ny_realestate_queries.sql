@@ -18,11 +18,12 @@ CREATE TABLE realestate_data (
     residential_units INT,
     commerical_units INT,
     total_units INT,
-    gross_square_feet STRING,
+    land_square_feet INT,
+    gross_square_feet INT,
     year_built INT,
     tax_class_at_time_of_sale INT,
     building_class_at_time_of_sale STRING,
-    sale_price STRING,
+    sale_price INT,
     sale_date TIMESTAMP
 )
 ROW FORMAT DELIMITED
